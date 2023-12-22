@@ -50,7 +50,7 @@ func (c *RabbitMQPublisher) configureExchange() error {
 	return err
 }
 
-func (c *RabbitMQPublisher) publishLog(ctx context.Context,routingKey string, body *Log) error {
+func (c *RabbitMQPublisher) publishLog(ctx context.Context,routingKey string, body *LogData) error {
 	b,_ := json.Marshal(body)
 
 	err := c.ch.PublishWithContext(ctx,
@@ -59,6 +59,7 @@ func (c *RabbitMQPublisher) publishLog(ctx context.Context,routingKey string, bo
 		false,
 		false,
 		amqp.Publishing{
+			DeliveryMode: amqp.Persistent,
 			ContentType: "text/plain",
 			Body: []byte(b),
 		},

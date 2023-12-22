@@ -33,13 +33,13 @@ func IngestLog(w http.ResponseWriter, r *http.Request) {
 	}
 
 	formattedLogLevel := strings.ToLower(lr.Level)
-	if formattedLogLevel != "info" && formattedLogLevel != "warning" && formattedLogLevel != "error" {
+	if formattedLogLevel != "info" && formattedLogLevel != "debug" && formattedLogLevel != "error" {
 		w.WriteHeader(http.StatusBadRequest)
-		w.Write([]byte("log level should be one of info, warning or error."))
+		w.Write([]byte("log level should be one of info, debug or error."))
 		return
 	}
 
-	log := &Log{
+	log := &LogData{
 		Level:   formattedLogLevel,
 		Message: lr.Message,
 		From:    lr.From,

@@ -1,0 +1,8 @@
+from='pdf-service-1' log_level='error' msg='Error while gedddnerating PDF' time='2023-12-22T18:00:03+05:30'
+from='pdf-service-1' log_level='debug' msg='Error while gedddnerating PDF' time='2023-12-22T18:00:27+05:30'
+from='pdf-service-1' log_level='info' msg='Error while gedddnerating PDF' time='2023-12-22T18:00:44+05:30'
+from='pdf-service-1' log_level='info' msg='Error while gedddnerating PDF' time='2023-12-22T18:53:15+05:30'
+from='pdf-service-1' log_level='info' msg='Error while gedddnerating PDF' time='2023-12-22T18:53:16+05:30'
+from='pdf-service-1' log_level='info' msg='Error while gedddnerating PDF' time='2023-12-22T18:53:17+05:30'
+from='pdf-service-1' log_level='debug' msg='Error while gedddnerating PDF' time='2023-12-22T18:53:26+05:30'
+from='pdf-service-1' log_level='error' msg='Error while gedddnerating PDF' time='2023-12-22T18:53:33+05:30'
