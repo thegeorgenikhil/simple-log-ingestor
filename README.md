@@ -13,7 +13,7 @@ go mod tidy
 Use the make command to start the `server` and `rabbitmq-instance(docker)`
 
 ```bash
-make run
+make start
 ```
 
 ### Ingest a Log using the HTTP Server
