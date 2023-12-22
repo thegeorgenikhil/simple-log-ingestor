@@ -1,6 +1,6 @@
 version: '3'
 
-services:  
+services:
   rabbitmq:
     image: rabbitmq:3.11-management-alpine
     environment:
@@ -14,3 +14,9 @@ services:
     ports:
       - "5672:5672"
       - "15672:15672"
+    networks:
+      - log-ingestor-network
+
+
+networks:
+  log-ingestor-network:
