@@ -57,7 +57,7 @@ func IngestLog(w http.ResponseWriter, r *http.Request) {
 		w.Write([]byte("Error while publishing log."))
 		return
 	}
-	
+
 	w.WriteHeader(http.StatusCreated)
 	w.Write([]byte("Log received!"))
 }

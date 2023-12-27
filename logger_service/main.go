@@ -40,7 +40,6 @@ func main() {
 			var l LogData
 			_ = json.Unmarshal(d.Body, &l)
 
-
 			switch l.Level {
 			case "info":
 				logger.Info(l.Message, l.From, l.Time)

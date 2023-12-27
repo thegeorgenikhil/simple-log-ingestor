@@ -1,0 +1,2 @@
+from='my-auth-service-2' log_level='error' msg='not able to parse jwt' time='2023-12-27T22:55:59+05:30' status='Mail Sent!' email='nikhilgeorge2015@gmail.com' mail_sent='2023-12-27 22:55:59.771323333 +0530 IST m=+20.552134690'
+from='my-auth-service-2' log_level='error' msg='invalid token string' time='2023-12-27T22:58:06+05:30' status='Mail Sent!' email='nikhilgeorge2015@gmail.com' mail_sent='2023-12-27 22:58:06.901144655 +0530 IST m=+71.659180895'

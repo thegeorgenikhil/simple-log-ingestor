@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log Alert</title>
+    
+</head>
+<body style="font-family: Arial, sans-serif;background-color: #f4f4f4;color: #333;padding: 20px;">
+    <h2 style="color: #d9534f;">Log Alert</h2>
+    <table style="border-collapse: collapse; width: 100%; margin-bottom: 20px;">
+        <tr>
+            <th style="border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #d9534f; color: #fff;">Level</th>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: left;">{{.Level}}</td>
+        </tr>
+        <tr>
+            <th style="border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #d9534f; color: #fff;">Message</th>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: left;">{{.Message}}</td>
+        </tr>
+        <tr>
+            <th style="border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #d9534f; color: #fff;">From</th>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: left;">{{.From}}</td>
+        </tr>
+        <tr>
+            <th style="border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #d9534f; color: #fff;">Time</th>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: left;">{{.Time.Format "2006-01-02 15:04:05"}}</td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -66,7 +66,7 @@ func (c *RabbitMQConsumer) configureExchange(exchangeName string) error {
 func (c *RabbitMQConsumer) configureQueue() (amqp.Queue, error) {
 	q, err := c.ch.QueueDeclare(
 		"",    // name
-		true, // durable
+		true,  // durable
 		false, // delete when unused
 		true,  // exclusive
 		false, // no-wait

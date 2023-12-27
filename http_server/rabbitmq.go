@@ -38,30 +38,30 @@ func NewRabbitMQPublisher(connectionString string) (*RabbitMQPublisher, error) {
 func (c *RabbitMQPublisher) configureExchange() error {
 	err := c.ch.ExchangeDeclare(
 		_exchangeName, // name
-		"direct",      // type 
+		"direct",      // type
 		// The routing algorithm behind a "direct" exchange is simple - a message goes to the queues whose routing key exactly matches the routing key of the message.
-		true,          // durable
-		false,         // auto-deleted
-		false,         // internal
-		false,         // no-wait
-		nil,           // arguments
+		true,  // durable
+		false, // auto-deleted
+		false, // internal
+		false, // no-wait
+		nil,   // arguments
 	)
 
 	return err
 }
 
-func (c *RabbitMQPublisher) publishLog(ctx context.Context,routingKey string, body *LogData) error {
-	b,_ := json.Marshal(body)
+func (c *RabbitMQPublisher) publishLog(ctx context.Context, routingKey string, body *LogData) error {
+	b, _ := json.Marshal(body)
 
 	err := c.ch.PublishWithContext(ctx,
 		_exchangeName, // name of the exchange to publish
-		routingKey, 
+		routingKey,
 		false,
 		false,
 		amqp.Publishing{
 			DeliveryMode: amqp.Persistent,
-			ContentType: "text/plain",
-			Body: []byte(b),
+			ContentType:  "text/plain",
+			Body:         []byte(b),
 		},
 	)
 
