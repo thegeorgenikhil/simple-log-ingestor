@@ -22,7 +22,7 @@ func (f *KeyValueFormatter) Format(entry *logrus.Entry) ([]byte, error) {
 			" time='" + timestamp + "'" +
 			" status='Mail Sent!'" +
 			" email='" + entry.Data["email"].(string) + "'" +
-			" mail_sent='" + entry.Data["mail_sent"].(string) + "'" + "\n",
+			" mail_sent='" + entry.Data["mail_sent_at"].(string) + "'" + "\n",
 	), nil
 }
 
